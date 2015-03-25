@@ -1,0 +1,276 @@
+/*
+	Title: 	Home.css
+	Author: Connor C. McKee
+	Date:	03-23-2015
+*/
+
+
+/* General */
+
+* { font-family: Roboto; }
+
+body {  background-image: url( "../img/bg.png" );
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: rgb( 5, 5, 5 );
+        overflow-x: hidden; }
+
+
+/* Navigation */
+
+#navigation {
+    text-align: center;
+}
+
+
+#navigation a div > div   {
+    padding-top: 10px;
+    color: white;
+    font-size: 20pt;
+
+    border-bottom: 2px solid white;
+
+}
+
+#navigation a div > div:hover {
+    font-weight: 500;
+    background-color: rgba( 255, 255, 255, 0.5 );
+}
+
+
+/* Bio & Header */
+
+#bio    {
+    overflow: hidden;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#bio div    {
+    border: 10px solid rgba( 255, 255, 255, 0.5 );
+    border-top-width: 0px;
+    margin-top: -10px;
+    background-color: rgba( 5, 5, 5, 0.5 );
+    color: rgb( 128, 128, 128 );
+}
+
+#pageTitle h1 { width: 100%;
+                background-color: rgba( 255, 255, 255, 0.5 );
+                text-align: center; 
+                font-size: 40pt;
+                font-weight: 700;
+                }
+
+#timers a  {   color: inherit; }
+
+#timers a:hover,
+#timers a:focus {   text-decoration: none;  }
+
+
+/* Timers */
+
+.timer {    text-align: center;
+            padding-top: 0.1em;
+            padding-bottom: 2em;
+            margin: 10px auto 10px auto; }
+
+.timer > div { 
+    display: inline-block;
+    width: 10%;
+    font-size: 18pt;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px 2px rgb( 50, 50, 50 );
+    
+    /* BG Gradient */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #b4b4b4 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#b4b4b4)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#b4b4b4 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#b4b4b4 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#b4b4b4 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 0%,#b4b4b4 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b4b4b4',GradientType=0 ); /* IE6-9 */
+}
+
+.timer h2   {
+    font-weight: 500;
+    color: white;
+}
+
+.greenGlow {
+    background: rgba( 128, 255, 128, 0.5 );
+}
+
+.navyGlow {
+    background: rgba( 0, 128, 255, 0.5 );
+}
+
+.aquaGlow {
+    background: rgba( 0, 255, 255, 0.5 );
+}
+
+.purpleGlow {
+    background: rgba( 255, 0, 255, 0.5 );
+}
+
+
+/* Animations */
+
+.rainbowText {
+    /* Default Color, should animation delay */
+    color: rgb( 64, 128, 64 );
+    /* Chrome, Safari, Opera */
+    -webkit-animation-name: rainbowText;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    /* "Standard" */
+    animation-name: rainbowText;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;   }
+
+
+    /* Chrome, Safari, Opera */
+@-webkit-keyframes rainbowText {
+    0%   {  color: rgb( 64, 128, 64 );  }
+    25%  {  color: rgb( 0, 128, 128 );  }
+    50%  {  color: rgb( 128, 0, 128 );  }
+    75%  {  color: rgb( 0, 64, 128 );  }
+    100% {  color: rgb( 64, 128, 64 );  }
+}
+
+    /* Standard syntax */
+@keyframes rainbowText {
+    0%   {  color: rgb( 64, 128, 64 );  }
+    25%  {  color: rgb( 0, 128, 128 );  }
+    50%  {  color: rgb( 128, 0, 128 );  }
+    75%  {  color: rgb( 0, 64, 128 );  }
+    100% {  color: rgb( 64, 128, 64 );  }
+}
+
+
+/* Bootstrap 5ths Addon */
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1100px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+
+/* Section Headers */
+
+.sectionHeader img  {
+    margin-top: 10px;
+    opacity: 0.8;
+    width: 100%;
+}
+
+.sectionTitle   {
+    height: 68px;
+    margin-top: 20px;
+    margin-bottom: 10px;  
+}
+
+.sectionTitleText   {
+    color: white;
+    font-size: 38pt;
+    padding-left: 1em;
+}
+
+#meetingHeader .sectionTitle > div {
+    background: rgba( 128, 255, 128, 0.5 );
+    height: 100%;
+}
+
+#datingHeader .sectionTitle > div {
+    background: rgba( 0, 128, 255, 0.5 );
+    height: 100%;
+}
+
+#engagedHeader .sectionTitle > div {
+    background: rgba( 0, 255, 255, 0.5 );
+    height: 100%;
+}
+
+#weddingHeader .sectionTitle > div {
+    background: rgba( 255, 0, 255, 0.5 );
+    height: 100%;
+}
+
+.leftExtender   {
+    position: relative;
+    right: 100%;
+    bottom: 100%;
+}
+
+.rightExtender   {
+    position: relative;
+    left: 100%;
+    bottom: 100%;
+}
+
+/* Section Content */
+
+.section    {
+    color: white;
+}
+
+.sectionText > div   {
+    text-align: justify;
+    padding: 10px;
+    background-color: rgba( 255, 255, 255, 0.5 );
+}
+
+.returnLink {
+    text-align: center;
+    font-size: 18pt;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: white;
+}
+
+#meetingContent .returnLink    {
+    border-color: rgba( 128, 255, 128, 0.5 );
+}
+
+#datingContent .returnLink    {
+    border-color: rgba( 0, 128, 255, 0.5 );
+}
+
+#engagedContent .returnLink    {
+    border-color: rgba( 0, 255, 255, 0.5 );
+}
+
+#weddingContent .returnLink    {
+    border-color: rgba( 255, 0, 255, 0.5 );
+}
