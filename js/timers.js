@@ -130,4 +130,11 @@ function updateAllTimers(){
 updateAllTimers();
 setInterval( updateAllTimers, 1000 );
 
+
+// Adds current year to tags
+var currentYear = new Date();
+$(".currentYear").html( currentYear.getFullYear() );
+
+
+// Placed at bottom to allow delay
 $( "#bio" ).css( "transition", "padding 2s" );

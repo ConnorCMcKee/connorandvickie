@@ -7,14 +7,20 @@
 
 /* General */
 
-* { font-family: Roboto; }
+* {
+    font-family: Roboto;
+}
+
+html, body    {
+    overflow-x: hidden;
+    max-width: 100%;
+}
 
 body {  background-image: url( "../img/bg.png" );
         background-position: center top;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-color: rgb( 5, 5, 5 );
-        overflow-x: hidden; }
+        background-color: rgb( 5, 5, 5 ); }
 
 
 /* Navigation */
@@ -188,7 +194,6 @@ body {  background-image: url( "../img/bg.png" );
 /* Section Headers */
 
 .sectionHeader img  {
-    margin-top: 10px;
     opacity: 0.8;
     width: 100%;
 }
@@ -196,13 +201,13 @@ body {  background-image: url( "../img/bg.png" );
 .sectionTitle   {
     height: 68px;
     margin-top: 20px;
-    margin-bottom: 10px;  
+    margin-bottom: 20px;  
 }
 
 .sectionTitleText   {
     color: white;
     font-size: 38pt;
-    padding-left: 1em;
+    padding-left: 0.5em;
 }
 
 #meetingHeader .sectionTitle > div {
@@ -254,8 +259,10 @@ body {  background-image: url( "../img/bg.png" );
     font-size: 18pt;
     border-bottom-width: 2px;
     border-bottom-style: solid;
+    border-top-width: 2px;
+    border-top-style: solid;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
     color: white;
 }
 
@@ -273,4 +280,17 @@ body {  background-image: url( "../img/bg.png" );
 
 #weddingContent .returnLink    {
     border-color: rgba( 255, 0, 255, 0.5 );
+}
+
+/* Footer */
+
+#footer {
+    text-align: center;
+    color: rgb( 128, 128, 128 );
+    font-size: 13pt;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-style: italic;
+    font-family: serif;
+    letter-spacing: 2px;
 }
