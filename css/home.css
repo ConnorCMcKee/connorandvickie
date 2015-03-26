@@ -54,8 +54,6 @@ body {  background-image: url( "../img/bg.png" );
 }
 
 #bio div    {
-    border: 10px solid rgba( 255, 255, 255, 0.5 );
-    border-top-width: 0px;
     margin-top: -10px;
     background-color: rgba( 5, 5, 5, 0.5 );
     color: rgb( 128, 128, 128 );
@@ -68,10 +66,21 @@ body {  background-image: url( "../img/bg.png" );
                 font-weight: 700;
                 }
 
+#timers {
+    padding-bottom: 10px;
+}
+
 #timers a  {   color: inherit; }
 
 #timers a:hover,
 #timers a:focus {   text-decoration: none;  }
+
+.horizontalRule hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-width: 2px;
+    border-color: rgba( 255, 255, 255, 0.5 );
+}
 
 
 /* Timers */

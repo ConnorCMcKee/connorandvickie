@@ -11,7 +11,7 @@ $( "#bio" ).css( "padding-top", $( "#bio div" ).height() + 10 );
 function setTimerHeight(){
     var timersHeight = $("#timers").height();
     var pageHeight = window.innerHeight;
-    var timersMargin = pageHeight - ( timersHeight + $("#navigation").height() + 28 );
+    var timersMargin = pageHeight - ( timersHeight + $("#navigation").height() + 16 );
     
     // Catch to make sure the fully extend #bio will fit on the page
     if ( timersMargin < 0 ) {
@@ -26,9 +26,9 @@ $( window ).resize( setTimerHeight );
 
 // Adds #bioButton functionality
 var collapsed = true;
-$( "#bioButton" ).click(function(event){
+$( "#bioButton, #aboutButton" ).click(function(event){
     if ( collapsed ) {
-        $( "#bio" ).css( "padding-top", 0 );
+        $( "#bio" ).css( "padding-top", 10 );
         collapsed = false;
     } else {
         $( "#bio" ).css( "padding-top", $( "#bio div" ).height() + 10 );
@@ -36,13 +36,6 @@ $( "#bioButton" ).click(function(event){
     }
 });
 
-//Adds #aboutButton functionality
-$( "#aboutButton" ).click(function(event){
-    if ( collapsed ) {
-        $( "#bio" ).css( "padding-top", 0 );
-        collapsed = false;
-    }
-});
 
 
 // Initialized date and div info for timers
@@ -129,6 +122,26 @@ function updateAllTimers(){
 // Runs update timer on load and every second after
 updateAllTimers();
 setInterval( updateAllTimers, 1000 );
+
+
+// Adds smooth scrolling to the page (note: NOT MY SCRIPT
+$(document).ready(function(){
+  $('a[href*=#]').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 1000);
+       return false;
+      }
+    }
+  });
+});
 
 
 // Adds current year to tags
