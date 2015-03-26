@@ -72,6 +72,25 @@ body {
     overflow: auto
 }
 
+#bioText h3, #bioText h2    {
+    margin: 0;
+    font-family: 'Arizonia', cursive;
+}
+
+#bioText h2 {
+    font-size: 28pt;
+}
+
+#thankyouBottom {
+    border-bottom: 2px dotted white;
+    padding-bottom: 15px;
+}
+
+#bio p  {
+    margin-top: 15px;
+    text-align: justify;
+}
+
 #bio div   {
     color: white;
 }
@@ -80,8 +99,17 @@ body {
     padding: 0;
 }
 
+#bioVickie  {
+    background: rgba( 128, 255, 128, 0.5 );
+}
+
+#bioConnor  {
+    background: rgba( 255, 0, 255, 0.5 );
+}
+
 #bio img  {
     width: 100%;
+    opacity: 0.7;
 }
 
 
