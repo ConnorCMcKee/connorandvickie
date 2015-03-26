@@ -16,11 +16,13 @@ html, body    {
     max-width: 100%;
 }
 
-body {  background-image: url( "../img/bg.png" );
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-color: rgb( 5, 5, 5 ); }
+body {  
+    background-image: url( "../img/bg.png" );
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb( 5, 5, 5 );
+}
 
 
 /* Navigation */
@@ -55,7 +57,7 @@ body {  background-image: url( "../img/bg.png" );
 
 #bio div    {
     margin-top: -10px;
-    background-color: rgba( 5, 5, 5, 0.5 );
+    background-color: rgba( 128, 128, 128, 0.5 );
     color: rgb( 128, 128, 128 );
 }
 
@@ -142,7 +144,7 @@ body {  background-image: url( "../img/bg.png" );
     -webkit-animation-iteration-count: infinite;
     /* "Standard" */
     animation-name: rainbowText;
-    animation-duration: 5s;
+    animation-duration: 4s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;   }
 
@@ -216,7 +218,7 @@ body {  background-image: url( "../img/bg.png" );
 .sectionTitleText   {
     color: white;
     font-size: 38pt;
-    padding-left: 0.5em;
+    padding-left: 5px;
 }
 
 #meetingHeader .sectionTitle > div {
@@ -249,6 +251,20 @@ body {  background-image: url( "../img/bg.png" );
     position: relative;
     left: 100%;
     bottom: 100%;
+}
+
+.rightExtenderMini  {
+    width: 5%;
+    position: relative;
+    left: 100%;
+    bottom: 200%;
+}
+
+.leftExtenderMini  {
+    width: 5%;
+    position: relative;
+    right: 5%;
+    bottom: 200%;
 }
 
 /* Section Content */
@@ -302,4 +318,23 @@ body {  background-image: url( "../img/bg.png" );
     font-style: italic;
     font-family: serif;
     letter-spacing: 2px;
+}
+
+/* Maps */
+
+.map    {
+    overflow:hidden;
+    height:300px;
+    width:100%;
+    color: rgb( 5, 5, 5 );
+}
+
+#gmap_canvas    {
+    height:300px;
+    width:100%;
+}
+
+#gmap_canvas img {
+    max-width:none!important;
+    background:none!important;
 }
