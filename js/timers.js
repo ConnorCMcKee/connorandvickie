@@ -4,8 +4,15 @@
 	Date:	03-23-2015
 */
 
-$( "#bio" ).css( "height", $( "#bio div" ).height() + 88 );
-$( "#bio" ).css( "padding-top", $( "#bio div" ).height() + 10 );
+// Prepares bio heights on start
+$( "#bio" ).css( "padding-top", $( "#bioConnor" ).height() + 10 );
+function setBioHeights(){
+    $( "#bio" ).css( "height", $( "#bioConnor" ).height() + 88 );
+    $( "#bioText" ).css( "height", $( "#bioConnor" ).height() );
+}
+
+setBioHeights();
+$( window ).resize( setBioHeights );
 
 // Sets timers to display at the bottom of the screen
 function setTimerHeight(){
@@ -31,7 +38,7 @@ $( "#bioButton, #aboutButton" ).click(function(event){
         $( "#bio" ).css( "padding-top", 10 );
         collapsed = false;
     } else {
-        $( "#bio" ).css( "padding-top", $( "#bio div" ).height() + 10 );
+        $( "#bio" ).css( "padding-top", $( "#bioConnor" ).height() + 10 );
         collapsed = true;
     }
 });
