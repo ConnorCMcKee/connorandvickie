@@ -4,19 +4,24 @@
 	Date:	03-23-2015
 */
 
+var collapsed = true;   // Variable to track if #bio is collapsed
+var bioHeight = $( "#bioConnor" ).width() * (4/3);  // Variable to prepare Bio Heights
+var firstTimeHeight = 28;   // Variable to determine first-time height difference
+
 // Prepares bio heights on start
-$( "#bio" ).css( "padding-top", $( "#bioConnor" ).height() + 10 );
-function setBioHeights(){
-    $( "#bio" ).css( "height", $( "#bioConnor" ).height() + 88 );
-    $( "#bioText" ).css( "height", $( "#bioConnor" ).height() );
-}
-
-setBioHeights();
-$( window ).resize( setBioHeights );
-
-// Sets timers to display at the bottom of the screen
-function setTimerHeight(){
-    var timersHeight = $("#timers").height();
+function setHeights(){
+    
+    if ( collapsed ){
+        $( "#bio" ).css( "padding-top", bioHeight + 10 );
+    }else{
+        $( "#bio" ).css( "padding-top", 10 );
+    }
+    
+    $( "#bio" ).css( "height", bioHeight + 88 );
+    $( "#bioText" ).css( "height", bioHeight );
+    
+    // Prepares Timer Heights
+    var timersHeight = $("#timers").height() + firstTimeHeight - 30;
     var pageHeight = window.innerHeight;
     var timersMargin = pageHeight - ( timersHeight + $("#navigation").height() + 16 );
     
@@ -28,22 +33,27 @@ function setTimerHeight(){
     $("#timers").css( "margin-top", timersMargin );
 }
 
-setTimerHeight();
-$( window ).resize( setTimerHeight );
+// Runs setHeights() on load and resize
+setHeights();
+$( window ).resize( function(){
+    bioHeight = $( "#bioConnor" ).width() * (4/3);
+});
+$( window ).resize( setHeights );
 
 // Adds #bioButton functionality
-var collapsed = true;
 $( "#bioButton, #aboutButton" ).click(function(event){
+    $( "#bio" ).css( "transition", "padding 2s" );
     if ( collapsed ) {
         $( "#bio" ).css( "padding-top", 10 );
         collapsed = false;
     } else {
-        $( "#bio" ).css( "padding-top", $( "#bioConnor" ).height() + 10 );
+        $( "#bio" ).css( "padding-top", bioHeight + 10 );
         collapsed = true;
     }
+    setTimeout( function(){
+        $( "#bio" ).css( "transition", "none" );
+    }, 2000 );
 });
-
-
 
 // Initialized date and div info for timers
 var metDate = new Date( 2013, 10, 25, 18, 30, 00 );
@@ -130,6 +140,8 @@ function updateAllTimers(){
 updateAllTimers();
 setInterval( updateAllTimers, 1000 );
 
+// Ensures firstTimeHeight is only effective once
+firstTimeHeight = 0;
 
 // Adds smooth scrolling to the page (note: NOT MY SCRIPT
 $(document).ready(function(){
@@ -149,12 +161,3 @@ $(document).ready(function(){
     }
   });
 });
-
-
-// Adds current year to tags
-var currentYear = new Date();
-$(".currentYear").html( currentYear.getFullYear() );
-
-
-// Placed at bottom to allow delay
-$( "#bio" ).css( "transition", "padding 2s" );

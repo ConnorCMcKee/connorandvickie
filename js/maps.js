@@ -1,3 +1,22 @@
+/*
+	Title:	Maps.js
+	Author: Connor C. McKee
+	Date:	03-23-2015
+    
+    NOTE:   This title is a misnomer; this file contains all scripts pertaining to specific page CONTENT (not layout/behaviour)
+*/
+
+
+// Embedded Facebook Video
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+
 // Map to St. John's
 function init_map(){
     var myOptions = {
@@ -16,3 +35,8 @@ function init_map(){
 }
 
 init_map();
+
+
+// Adds current year to tags
+var currentYear = new Date();
+$(".currentYear").html( currentYear.getFullYear() );
