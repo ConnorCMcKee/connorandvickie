@@ -101,7 +101,6 @@ p   {
 
 #bio div   {
     color: white;
-    display: none; /* This prevents #bio contents from popping in during load (display is set back to "inherit" in timers.js) */
 }
 
 #bioVickie, #bioConnor  {

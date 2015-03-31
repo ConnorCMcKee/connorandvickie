@@ -1,7 +1,7 @@
 /*
 	Title:	Timers.js
 	Author: Connor C. McKee
-	Date:	03-31-2015
+	Date:	03-23-2015
 */
 
 var collapsed = true;   // Variable to track if #bio is collapsed
@@ -39,9 +39,6 @@ $( window ).resize( function(){
     bioHeight = $( "#bioConnor" ).width() * (4/3);
 });
 $( window ).resize( setHeights );
-
-// Displays #bio content (hidden at start)
-$("#bioText, #bioVickie, #bioConnor").css( "display", "inherit" );
 
 // Adds #bioButton functionality
 $( "#bioButton, #aboutButton" ).click(function(event){
