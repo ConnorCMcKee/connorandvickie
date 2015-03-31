@@ -1,7 +1,7 @@
 /*
 	Title:	Maps.js
 	Author: Connor C. McKee
-	Date:	03-23-2015
+	Date:	03-30-2015
     
     NOTE:   This title is a misnomer; this file contains all scripts pertaining to specific page CONTENT (not layout/behaviour)
 */

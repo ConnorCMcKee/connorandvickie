@@ -1,7 +1,7 @@
 /*
 	Title: 	Home.css
 	Author: Connor C. McKee
-	Date:	03-23-2015
+	Date:	03-31-2015
 */
 
 
@@ -101,6 +101,7 @@ p   {
 
 #bio div   {
     color: white;
+    display: none; /* This prevents #bio contents from popping in during load (display is set back to "inherit" in timers.js) */
 }
 
 #bioVickie, #bioConnor  {
@@ -119,6 +120,8 @@ p   {
     width: 100%;
     opacity: 0.7;
 }
+
+
 
 
 /* Timers */
