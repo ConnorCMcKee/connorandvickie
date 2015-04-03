@@ -261,7 +261,7 @@ p   {
 /* Section Headers */
 
 .sectionHeader img  {
-    opacity: 0.8;
+    /* opacity: 0.8; Instead, pictures will be dimmed approximately 20% */
     width: 100%;
 }
 
