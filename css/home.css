@@ -333,10 +333,108 @@ p   {
     color: white;
 }
 
+.sectionText {
+    margin-bottom: 20px;
+}
+
 .sectionText > div   {
     text-align: justify;
     padding: 10px;
     background-color: rgba( 255, 255, 255, 0.5 );
+}
+
+.sectionText p {
+    text-indent: 2em;
+}
+
+.sectionReference {
+    margin-bottom: 20px;
+}
+
+.storyHeader {
+    padding-bottom: 8px;
+    margin-top: 3px;
+    border-bottom: 2px dashed white;
+    border-bottom-style:ridge
+}
+
+.datingImage {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.datingImage img {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0       0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: .5s ease-in-out;
+    -moz-filter: grayscale(100%);
+    -moz-transition: .5s ease-in-out;
+    -o-filter: grayscale(100%);
+    -o-transition: .5s ease-in-out;
+    width: 100%;
+}
+
+.datingImage:hover img {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    -webkit-transition: .5s ease-in-out;
+    -moz-filter: grayscale(0%);
+    -moz-transition: .5s ease-in-out;
+    -o-filter: grayscale(0%);
+    -o-transition: .5s ease-in-out;
+}
+
+.imageOverlay {
+    position: relative;
+    height: 100px;
+    margin-bottom: -100px;
+    background-color: rgba( 0, 0, 0, 0.5 );
+    transition: left 1s, top 1s;
+    padding: 5px;
+}
+
+.overlayFromRight {
+    top: -100px;
+    left: 100%;
+}
+.overlayFromLeft {
+    top: -100px;
+    left: -100%;
+}
+.overlayFromBottom {
+    top: 0px;
+}
+
+.datingImage:hover .imageOverlay {
+    left: 0px;
+    top: -100px;
+}
+
+.overlayLocation {
+    font-size: 16pt;
+    line-height: 16pt;
+    margin-bottom: 10px;
+}
+
+.weddingRegistry {
+    padding: 10px;
+}
+
+.weddingRegistry p {
+     text-align: justify;
+}
+
+.weddingRegistry h2 {
+    margin-top: 3px;
+}
+
+#bbbRegistry {
+    background-color: rgba( 128, 255, 128, 0.5 );
+}
+
+#amazonRegistry {
+    background-color: rgba( 0, 255, 255, 0.5 );
 }
 
 .returnLink {
@@ -347,7 +445,7 @@ p   {
     border-top-width: 2px;
     border-top-style: solid;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 00px;
     color: white;
 }
 
@@ -397,4 +495,123 @@ p   {
 #gmap_canvas img {
     max-width:none!important;
     background:none!important;
+}
+
+/* Awesome Buttons */
+
+.b05_3d_roll {
+    margin: 0;
+    border: 0;
+    font-size: 18px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+.b05_3d_roll div {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    border: rgba( 255, 0, 255, 0.5 ) solid 1px;
+    pointer-events: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.b05_3d_roll div:nth-child(1) {
+    color: rgba( 255, 0, 255, 0.5 );
+    background-color: rgba( 255, 0, 255, 0.5 );
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform-origin: 50% 50% -25px;
+    -webkit-transform-origin: 50% 50% -25px;
+    -moz-transform-origin: 50% 50% -25px;
+}
+
+.b05_3d_roll div:nth-child(2) {
+    color: rgba( 255, 0, 255, 0.5 );
+    background-color: #ffffff;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform-origin: 50% 50% -25px;
+    -webkit-transform-origin: 50% 50% -25px;
+    -moz-transform-origin: 50% 50% -25px;
+}
+
+.b05_3d_roll:hover div:nth-child(1) {
+    color: #ffffff;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+}
+
+.b05_3d_roll:hover div:nth-child(2) {
+    background-color: rgba( 255, 0, 255, 0.5 );
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+}
+
+/* Media Queries for Bio Text */
+
+@media( max-width: 992px ) {
+    #bioText{
+        padding: 0 7px;
+    }
+    
+    #thankyouBottom {
+        padding-bottom: 10px;
+    }
+    
+    #bioText p {
+        margin-top: 10px;
+    }
+}
+@media( min-width: 992px ) {
+    #bioText{
+        padding: 0 50px;
+    }
+    
+    #thankyouBottom {
+        padding-bottom: 30px;
+    }
+    
+    #bioText p {
+        margin-top: 30px;
+    }
+}
+@media( min-width: 1200px ) {
+    #bioText{
+        padding: 0 100px;
+    }
+    
+    #thankyouBottom {
+        padding-bottom: 40px;
+    }
+    
+    #bioText p {
+        margin-top: 40px;
+    }
 }

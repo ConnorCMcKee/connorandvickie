@@ -65,7 +65,7 @@ var coupleTimer = $("#couple");
 var engagedDate = new Date( 2014, 10, 22, 15, 54, 00 );
 var engagedTimer = $("#engaged");
 
-var weddingDate = new Date( 2016, 0, 30, 13, 00, 00 );
+var weddingDate = new Date( 2016, 0, 30, 12, 30, 00 );
 var weddingTimer = $("#wedding");
 
 
@@ -142,6 +142,12 @@ setInterval( updateAllTimers, 1000 );
 
 // Ensures firstTimeHeight is only effective once
 firstTimeHeight = 0;
+
+// Appropriately Size the Rolling Buttons and Registries
+$( window ).resize( function(){
+    $('.b05_3d_roll div').width( $('.weddingRegistry p').width() - 20 ); // -20 for margins
+    $('#amazonRegistry p').height( $('#bbbRegistry p').height() );
+}).resize();
 
 // Adds smooth scrolling to the page (note: NOT MY SCRIPT
 $(document).ready(function(){
