@@ -1,7 +1,7 @@
 /*
 	Title:	Timers.js
 	Author: Connor C. McKee
-	Date:	03-23-2015
+	Date:	07-23-2015
 */
 
 var collapsed = true;   // Variable to track if #bio is collapsed
